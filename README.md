@@ -19,11 +19,14 @@ The data/ folder contains all the raw data of single-cell datasets, but also pre
 ## Python environment necessary for running TAPE and Scaden deconvolution methods
 In case the user wants to run the panel of deconvolution method to predict cell type abundance, which includes Scaden and TAPE, a python environnment will need to be set up. The file requirements_tape_scaden.txt allows to install and the dependencies in a python environment easily with the following commands: 
 
-XXX
+First, create a new python environment with:
+python3 -m venv tape\_scaden\_env
 
-XXX
+Load the python environment:
+source tape\_scaden\_env/bin/activate
 
-XXX
+Then, install all the libraries listed in file requirements_tape_scaden.txt:
+python3 -m pip install -r requirements_tape_scaden.txt
 
 This is how we implemented it: the R notebook will run a bash script, which will, first, i) load the python environment with required libraries, and then, ii) launch the python script with TAPE and Scaden methods. The python script then write all results in a CSV file that is read by the R script. This way, TAPE and Scaden deconvolution can be run directly from the R notebook and the results directly loaded.
 
