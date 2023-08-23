@@ -21,11 +21,11 @@ In case the user wants to run the panel of deconvolution method to predict cell 
 
 First, create a new python environment with:
 
-`python3 -m venv tape\_scaden\_env`
+`python3 -m venv tape_scaden_env`
 
 Load the python environment:
 
-`source tape\_scaden\_env/bin/activate`
+`source tape_scaden_env/bin/activate`
 
 Then, install all the libraries listed in file requirements_tape_scaden.txt:
 
