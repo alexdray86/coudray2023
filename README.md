@@ -41,27 +41,32 @@ XXX
 
 We provide notebooks for each Figures, named after figure numbers. Hereafter, we summarize the content of each notebook so that users can go and check the code of specific parts of the manuscript:
 
-### Fig2_deconvolution_invitro.ipynb
+### Fig2_invitro_experiment.ipynb
 
+Figures related to the in-vitro experiment developed in our research group. Cell line mixed were produced after cell counting and recording of cell line fraction, and sequenced immediatly after with standard bulk RNA sequencing. In this notebook we use a panel of deconvolution methods to deconovlute cell line fractions using a single-cell RNA-seq reference made from a mix of the same four cell lines. 
 
+### Fig3_1_preproc_integration.ipynb
 
-### Fig3_aml_3cohorts.ipynb
+In this notebook we present the integration pipeline for pairs of single-cell datasets. We first subset cells and genes, and then use Seurat integration pipeline to integrate two datasets. Utlimately, cell subtype labels are transfered from one dataset to the other. We then generate pseudo-bulks with ground truth cell subtype proportions, and save the resulting datasets into RDS objects to be used in `Fig3_2_deconvolution_panel.ipynb` notebook for deconvolution of cell subtype proportions. 
 
-### Fig3_analysis.ipynb
+### Fig3_2_deconvolution_panel.ipynb
 
-### Fig3_deconvolution_panel.ipynb
+Uses processed dataset from `Fig3_1_preproc_integration.ipynb` notebook to launch our panel of deconvolution methods in a cross-dataset context. the results are then saved and analysed in next notebook, `Fig3_3_analysis.ipynb`. 
 
-### Fig3_preproc.ipynb
+### Fig3_3_analysis.ipynb
 
-### Fig3_simulation.ipynb
+Results from deconvolution are compared with ground truth cell subtype proportions based on four metrics. Boxplots and ranking plots are generated for each of the 12 analysis we performed.
+
+### Fig3_4_amlCohorts.ipynb
+
+Here we run CLIMB deconvolution on 3 cohorts of AML patients, and show the results as a heatmap. Further comparison between CLIMB deconvolution output and van galen signature scores, and LSC17 signature, is performed. 
 
 ### Fig4_expression_deconvolution.ipynb
 
+In this notebook we perform deconvolution of cell subtype expression based on the in-vitro experiment (where our ground truth comes from bulk RNA-seq), and in a simulated context (based on Van Galen > Naldini cross-dataset deconvolution, for which we have ground truth cell subtype expression). Then, we performed an over-expression of 20 genes in HSC-like cell subtype, based on Van Galen > Naldini analysis, thus inducing over-expression in pseudo-bulk made from Naldini samples.
+ 
 ### Fig5_CLIFF_highres_invitro.ipynb
-
 ### Fig6_CLIFF_highres_beataml.ipynb
-
 ### Fig6_CLIFF_highres_simulation.ipynb
-
 ### Fig7_CLIFF-SC.ipynb
 
